@@ -7,10 +7,12 @@
     <li
       *ngFor="let movie of movies"
       (click)="onSelect(movie)"
-      class="list-group-item"
+      class="list-group-item d-flex justify-content-between"
       [class.active]="movie === selectedMovie"
     >
-      <span>{{ movie.id }} - </span>{{ movie.name }}
+      <div>
+        <span>{{ movie.id }} - </span>{{ movie.name }}
+      </div>
       <span class="close">x</span>
     </li>
   </ul>
