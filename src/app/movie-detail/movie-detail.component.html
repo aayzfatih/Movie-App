@@ -1,11 +1,24 @@
 <div class="card" *ngIf="movie">
   <div class="card-body">
-    id:{{ movie.id }} name:{{ movie.name }}
-    <div class="input-group">
+    id:{{ movie.id }}
+    <div class="form-group">
+      <label for="name">Name</label>
       <input type="text" [(ngModel)]="movie.name" class="form-control" />
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary">Update</button>
-      </div>
     </div>
+    <div class="form-group">
+      <label for="imageUrl">Name</label>
+      <input type="text" [(ngModel)]="movie.imageUrl" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="description">Name</label>
+      <textarea
+        type="text"
+        [(ngModel)]="movie.description"
+        class="form-control"
+      ></textarea>
+    </div>
+    <button (click)="save()" class="btn btn-primary btn-sm">
+      Save Changes
+    </button>
   </div>
 </div>
